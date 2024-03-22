@@ -1,6 +1,7 @@
 // create an array to store names
 const namesArray = []
 
+
 function addName() {
     const nameInput = document.getElementById('nameInput') // stores name input as a var using doc.id
     const name = nameInput.Value.trim() //store the trimmed value of input box in var
@@ -25,10 +26,12 @@ function displayNames() {
         li.classname = 'list-group-item'
         const span = document.createElement('span')
         span.textContent = name
+
+
         li.appendChild(span)
         nameList.appendChild(li)
     }
 
 
-}
+}//Event Listener for the button click to add a name
 document.getElementById('addNameBtn').addEventListener('click',addName)
