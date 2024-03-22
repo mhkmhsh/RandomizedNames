@@ -1,4 +1,14 @@
 
 body{
-    background-color: #330439;
+    background-color: #1e2924;
+}
+header{
+    background-color: #973e4d;
+}
+div#inputHolder{
+    background-color: #973e4d;
+}
+
+button.btn{
+    background-color:#828f75 ;
 }
