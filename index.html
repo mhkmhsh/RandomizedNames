@@ -16,19 +16,15 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="container mt-5">
+    <div class="container p-3">
       <div class="row">
         <div class="col-12 text-center">
-          <h1>Lucky Me Lottery</h1>
-          <p>
-            Add names to the list by typing them one at a time into the text box
-            and then clicking the "add NAme" button. <br />
-            To display a name at random, use the "Pick a Random name button
-            below the list.
-          </p>
+          <h1 class="text-white bg-dark">Lucky Me Lottery</h1>
+        <p class="bg-dark p-3 text-white"> Enjoy adding names to the list and picking them out!</p>
         </div>
       </div>
       <div class="row">
@@ -41,14 +37,14 @@
               placeholder="Enter a name"
             />
             <div class="input-group-append">
-              <button id="addNameBtn" class="btn btn-primary">Add Name</button>
+              <button id="addNameBtn" class="btn btn-dark">Add Name</button>
             </div>
           </div>
           <div class="div">
             <ul id="nameList" class="list-group"></ul>
           </div>
           <div id="randomName" class="mt-3 text-center"></div>
-          <button id="pickRandomBtn" class="btn btn-success mt-3">
+          <button id="pickRandomBtn" class="btn btn-danger mt-3">
             Pick Random Name
           </button>
         </div>
