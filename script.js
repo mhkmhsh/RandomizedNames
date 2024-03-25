@@ -1,18 +1,16 @@
 // create an array to store names
 const namesArray = []
 
-
 function addName() {
-    const nameInput = document.getElementById('nameInput') // stores name input as a var using doc.id
-    const name = nameInput.Value.trim() //store the trimmed value of input box in var
-    namesArray.push(name)// add the name to the end of the Array
-    displayNames()//call the displayNames function to update the list
-    nameInput.value = ''//clear the input field
+    const nameInput = document.getElementById('nameInput') //storing name input element as a var
+    const name = nameInput.value.trim() //get the TRIMMED value of the input box and store in a var
 
+    namesArray.push(name)//add the name to the end of the array
+    displayNames() // Call the displayNames function to update the list
 
+    nameInput.value = '' // Clear the input field after adding the name
 
 }
-
 
 function displayNames() {
     const nameList = document.getElementById('nameList')
