@@ -9,27 +9,53 @@ function addName() {
     displayNames() // Call the displayNames function to update the list
 
     nameInput.value = '' // Clear the input field after adding the name
-
 }
+
 
 function displayNames() {
     const nameList = document.getElementById('nameList')
-    nameList.innerHTML = ''// clear out previous list items
+    nameList.innerHTML = '' //clear out the previous list items
 
-    for (let i = 0; i < namesArray.length; i++) {
+    for (let i = 0; i < namesArray.length; i++){
         const name = namesArray[i]
-
+         
         const li = document.createElement('li')
+        li.className = 'list-group-item'
 
-        li.classname = 'list-group-item'
         const span = document.createElement('span')
         span.textContent = name
-
 
         li.appendChild(span)
         nameList.appendChild(li)
     }
+}
 
 
-}//Event Listener for the button click to add a name
-document.getElementById('addNameBtn').addEventListener('click',addName)
+function pickRandomName() {
+    const randomNameDiv = document.getElementById('randomName')
+    randomNameDiv.textContent = ''
+
+
+    //select random name from names array
+    const randomNumber = Math.floor(Math.random() * namesArray.length)
+    const randomName = namesArray[randomNumber]
+
+    randomNameDiv.textContent = randomName
+
+    namesArray.splice(randomNumber, 1)
+
+    displayNames();
+
+
+
+
+}
+
+
+
+
+// Event listener for the button click to add a name
+document.getElementById('addNameBtn').addEventListener('click', addName)
+
+// Event listener for the button click to select and display a rndm name
+document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName)
